@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #2c3a4f;
+  --text-color: #ffffff;
+  --info-background-color: #414654;
+  --hover-color: #ff4d4d;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+.header {
+  text-align: center;
+  margin-top: 5%;
+  color: var(--text-color);
+}
+
+.sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+.input {
+  width: 15rem;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: solid 0.5px;
+  border-radius: 0.3rem;
+}
+
+.check-btn {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 100px;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.info {
+  max-width: 500px;
+  text-align: center;
+  border: solid 0.5px;
+  padding: 1rem;
+  background-color: var(--info-background-color);
+}
+
+.check-btn:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
