@@ -31,3 +31,19 @@ input.addEventListener("keydown", (e) => {
     checkIfPalindrome(input);
   }
 });
+
+function handleScroll() {
+  const elements = document.querySelectorAll(".fade-in");
+
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      element.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScroll);
+
+// Trigger the scroll event on load to handle elements already in view
+window.addEventListener("load", handleScroll);

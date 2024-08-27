@@ -5,10 +5,9 @@
 }
 
 :root {
-  --body-color: #2c3a4f;
-  --text-color: #ffffff;
-  --info-background-color: #414654;
+  --text-color: #ecf0f1;
   --hover-color: #ff4d4d;
+  --text-info-color: #274a3d;
 }
 
 body {
@@ -17,7 +16,8 @@ body {
 
 .header {
   text-align: center;
-  margin-top: 5%;
+  font-size: 5em;
+  margin-bottom: 8rem;
   color: var(--text-color);
 }
 
@@ -28,18 +28,22 @@ body {
   align-items: center;
   height: 100vh;
   color: var(--text-color);
+  background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .input {
-  width: 15rem;
-  height: 1.5rem;
+  width: 20rem;
+  height: 2rem;
   margin-bottom: 0.5rem;
   border: solid 0.5px;
   border-radius: 0.3rem;
 }
 
 .check-btn {
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
   padding: 0.5rem;
   width: 100px;
   border-radius: 0.3rem;
@@ -49,15 +53,35 @@ body {
 }
 
 .info {
-  max-width: 500px;
+  margin-top: 1.5rem;
+  max-width: 630px;
+  font-size: 1.3em;
   text-align: center;
   border: solid 0.5px;
   padding: 1rem;
-  background-color: var(--info-background-color);
+  background: rgb(131, 150, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 150, 143, 0.3) 0%,
+    rgba(235, 237, 239, 0.3) 100%
+  );
+  color: var(--text-info-color);
 }
 
 .check-btn:hover {
   cursor: pointer;
   background-color: var(--hover-color);
   color: var(--text-color);
+}
+
+/** fade in effect **/
+.content {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Back to original position */
 }
