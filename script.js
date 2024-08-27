@@ -19,7 +19,7 @@ function checkIfPalindrome(input) {
 
 checkBtn.addEventListener("click", () => {
   if (input.value === "") {
-    window.alert("Kindly insert Text!");
+    window.alert("Are you realy a Detective?");
   } else {
     checkIfPalindrome(input);
   }
@@ -34,12 +34,17 @@ input.addEventListener("keydown", (e) => {
 
 function handleScroll() {
   const elements = document.querySelectorAll(".fade-in");
-
+  const fade = document.querySelectorAll(".fade");
   elements.forEach((element) => {
     const rect = element.getBoundingClientRect();
     if (rect.top < window.innerHeight) {
       element.classList.add("visible");
     }
+  });
+
+  fade.forEach((elements) => {
+    const check = elements.getBoundingClientRect();
+    if (check.top < window.innerHeight) elements.classList.add("visible");
   });
 }
 
